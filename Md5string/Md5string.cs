@@ -9,15 +9,36 @@ namespace Md5string
             if(string.IsNullOrEmpty(value)){
                 return string.Empty;
             }
-            using var md5 = MD5.Create();
-            var inputBytes = Encoding.ASCII.GetBytes(value);
-            var hashBytes = md5.ComputeHash(inputBytes);
-            var sb = new StringBuilder();
-            foreach (var item in hashBytes)
+            using (MD5 md5 = MD5.Create())
             {
-                sb.Append(item.ToString("X2"));   
-            }
-            return sb.ToString();
+                var inputBytes = Encoding.ASCII.GetBytes(value);
+                var hashBytes = md5.ComputeHash(inputBytes);
+                var sb = new StringBuilder();
+                foreach (var item in hashBytes)
+                {
+                    sb.Append(item.ToString("X2"));
+                }
+                return sb.ToString();
+            }          
+        }
+
+        public static bool CompareMd5(this string value, string md5)
+        {
+            var md5Convert = ToMd5(value);
+            if (comparar(md5Convert, md5))
+                return true;
+            else
+                return false;
+        }
+
+        private static bool comparar(string md5Convert, string compare)
+        {
+            System.StringComparer compara = System.StringComparer.OrdinalIgnoreCase;
+
+            if (0 == compara.Compare(md5Convert, compare))
+                return true;
+            else
+                return false;
         }
     }
 }
