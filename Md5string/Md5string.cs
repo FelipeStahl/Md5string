@@ -5,7 +5,7 @@ namespace Md5string
 {
     public static class Md5string
     {
-        public static string ToMd5(this string value){
+        public static string ToMD5(this string value){
             if(string.IsNullOrEmpty(value)){
                 return string.Empty;
             }
@@ -22,9 +22,9 @@ namespace Md5string
             }          
         }
 
-        public static bool CompareMd5(this string value, string md5)
+        public static bool CompareMD5(this string value, string md5)
         {
-            var md5Convert = ToMd5(value);
+            var md5Convert = ToMD5(value);
             if (comparar(md5Convert, md5))
                 return true;
             else

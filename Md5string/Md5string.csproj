@@ -2,19 +2,19 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.1</TargetFramework>
-    <PackageId>Md5string</PackageId>
+    <PackageId>MD5string</PackageId>
     <Version>1.0.0</Version>
     <License>MIT</License>
     <Authors>Felipe Stahlhofer</Authors>
     <Company>felipestahlhofer.com.br</Company>
-    <PackageDescription>Extensão de string para MD5</PackageDescription>
+    <PackageDescription>Extensão de string simples para MD5 \n\n Utilize .toMD5() em uma string para retornar um código MD5. \n Utilize .CompareMD5(md5) para comparar um código MD5 com a string.</PackageDescription>
     <Description>Extensão simples de string para conversão em MD5</Description>
     <RepositoryUrl>https://github.com/FelipeStahl/Md5string</RepositoryUrl>
     <PackageProjectUrl>https://github.com/FelipeStahl/Md5string</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
-    <PackageTags>Md5string</PackageTags>
-    <Title>Md5string Extensão</Title>
-    <Summary>Md5</Summary>
+    <PackageTags>MD5string</PackageTags>
+    <Title>MD5string Extensão</Title>
+    <Summary>MD5</Summary>
   </PropertyGroup>
 
 </Project>
